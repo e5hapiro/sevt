@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: sevt-latest
-        image: e5hapiro/sevt:latest
+        image: dhhenderson/sevt:latest
         ports:
         - containerPort: 8080
