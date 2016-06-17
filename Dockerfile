@@ -3,7 +3,13 @@
 FROM golang:alpine
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/outyetz
+
+RUN apk add --no-cache git \
+    && go get github.com/example/outyet \
+    && apk del git
+
+
+ADD . /go/src/github.com/example/outyet
 
 RUN apk add --no-cache git \
     && go get github.com/CiscoZeus/go-zeusclient \
@@ -12,10 +18,10 @@ RUN apk add --no-cache git \
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/outyetz
+RUN go install github.com/outyet
 
 # Run the outyet command by default when the container starts.
-ENTRYPOINT /go/bin/outyetz
+ENTRYPOINT /go/bin/outyet
 
 # Document that the service listens on port 9090.
 EXPOSE 9090
