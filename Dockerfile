@@ -24,6 +24,7 @@ RUN go install github.com/golang/example/outyet
 ENTRYPOINT /go/bin/outyet
 
 # Document that the service listens on port 9090.
-EXPOSE 9090
+#EXPOSE 9090
+EXPOSE 8080
 
 ENV ZEUS_TOKEN=8dcccc00
