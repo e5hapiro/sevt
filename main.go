@@ -2,7 +2,7 @@ package main
 
 import (
  	"fmt"
-  "http://github.com/CiscoZeus/go-zeusclient"
+  "./CiscoZeus/go-zeusclient"
  	"io"
  	"net/http"
 	"os"
