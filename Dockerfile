@@ -5,11 +5,11 @@ FROM golang:alpine
 # Copy the local package files to the container's workspace.
 
 RUN apk add --no-cache git \
-    && go get github.com/example/outyet \
+    && go get github.com/golang/example/outyet \
     && apk del git
 
 
-ADD . /go/src/github.com/example/outyet
+ADD . /go/src/github.com/golang/example/outyet
 
 RUN apk add --no-cache git \
     && go get github.com/CiscoZeus/go-zeusclient \
