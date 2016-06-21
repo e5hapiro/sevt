@@ -26,7 +26,7 @@ func main() {
 	// send env variables to zeus
 	z := &zeus.Zeus{ApiServ: "http://api.ciscozeus.io", Token: os.Getenv("ZEUS_TOKEN")}
 	logs := zeus.LogList{
-		Name: "syslog",
+		Name: "syslog-e5hapiro",
 		Logs: []zeus.Log{
 			zeus.Log{
 				"OS":       runtime.GOOS,
