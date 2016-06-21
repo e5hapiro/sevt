@@ -18,6 +18,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	// print env variables
+	fmt.Println("ZEUS_TOKEN:", os.Getenv("ZEUS_TOKEN"))
 	fmt.Println("OS:", runtime.GOOS)
 	fmt.Println("USER:", os.Getenv("USER"))
 	fmt.Println("HOME:", os.Getenv("HOME"))
